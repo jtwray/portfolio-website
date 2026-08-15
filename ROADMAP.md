@@ -10,10 +10,10 @@ This is the lightweight work queue. Keep only one implementation slice in progre
 - [x] Owner confirms `codex/experience-system-history` as the intended successor to `master`.
 - [x] Record local-only development and `https://tuckerwray.com` as the incumbent benchmark.
 - [ ] Confirm the interim qualified-contact conversion and decide audience priority only if a concrete conflict appears.
-- [ ] Map files referenced by the production page and files emitted by Vite.
-- [ ] Classify duplicate and legacy directories as required, archival, or removable.
-- [ ] Propose cleanup separately; do not delete files without approval.
-- [ ] Defer hosting selection until the candidate earns promotion over the incumbent.
+- [x] Map files referenced by the production page and files emitted by Vite.
+- [x] Classify duplicate and legacy directories as required, archival, or removable.
+- [x] Propose cleanup separately; do not delete files without approval.
+- [x] Defer hosting selection until the candidate earns promotion over the incumbent.
 
 Acceptance criteria:
 
@@ -80,3 +80,4 @@ Acceptance criteria:
 - [x] Vite local-development and production-build workflow exists.
 - [x] Production build passes on `codex/experience-system-history` during workflow setup.
 - [x] Current branch, audience, local-only status, and incumbent benchmark are recorded.
+- [x] Slice 1 source, build, legacy-tree, and incumbent findings are recorded.
