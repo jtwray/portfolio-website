@@ -81,3 +81,4 @@ Acceptance criteria:
 - [x] Production build passes on `codex/experience-system-history` during workflow setup.
 - [x] Current branch, audience, local-only status, and incumbent benchmark are recorded.
 - [x] Slice 1 source, build, legacy-tree, and incumbent findings are recorded.
+- [x] Owner-approved legacy cleanup is isolated, recoverable through Git, and build-verified.

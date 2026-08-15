@@ -1,6 +1,6 @@
 # Slice 1 baseline audit
 
-Status: complete pending one product confirmation and cleanup approval
+Status: complete pending one product confirmation
 
 Date: 2026-08-15
 
@@ -67,9 +67,16 @@ All seven internal fragment links resolve to IDs present in the page.
 
 Hash comparison confirms extensive exact duplication across `portfolio/`, `images/`, `images1/`, nested `assets/js/js/`, and nested `assets/sass/sass/`. Examples include the template JavaScript, Sass component tree, fonts, README/license copies, and many images appearing two or three times with identical SHA-256 hashes.
 
-## Cleanup proposal — not executed
+## Cleanup execution
 
-After owner approval, remove the legacy and unused targets listed above in one dedicated `chore/repository-cleanup` commit. Keep `LICENSE.txt` and the current workflow documentation. Replace the obsolete root README separately so cleanup remains mechanically reviewable.
+The owner approved the exact cleanup proposal. The legacy and unused targets listed above were removed in one dedicated cleanup change. `LICENSE.txt`, active product files, and workflow documentation were preserved. The obsolete root README remains for a separate replacement so cleanup stays mechanically reviewable.
+
+Post-cleanup verification:
+
+- 239 tracked files removed with no unrelated additions or modifications in the cleanup set.
+- `index.html`, `assets/css/portfolio.css`, and `LICENSE.txt` remain present.
+- `npm run build` passes and produces the same two-file release shape.
+- Current source references still require no removed local asset.
 
 Recovery implications:
 
@@ -122,5 +129,4 @@ Promotion recommendation: **do not replace the incumbent yet**. The candidate ha
 ## Owner checkpoints
 
 1. Confirm whether qualified contact should remain the candidate's primary conversion.
-2. Approve, revise, or reject the exact cleanup proposal.
-3. Confirm which current professional and project claims can be published.
+2. Confirm which current professional and project claims can be published.
