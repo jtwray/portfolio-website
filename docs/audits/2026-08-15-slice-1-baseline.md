@@ -1,6 +1,6 @@
 # Slice 1 baseline audit
 
-Status: complete pending one product confirmation
+Status: complete
 
 Date: 2026-08-15
 
@@ -128,5 +128,6 @@ Promotion recommendation: **do not replace the incumbent yet**. The candidate ha
 
 ## Owner checkpoints
 
-1. Confirm whether qualified contact should remain the candidate's primary conversion.
-2. Confirm which current professional and project claims can be published.
+1. Confirm which current professional and project claims can be published.
+
+The owner subsequently approved dual-path qualified contact: “Discuss a role” for hiring managers and “Discuss a project” for prospective clients, using distinct email subject lines.

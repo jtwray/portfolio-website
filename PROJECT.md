@@ -12,7 +12,8 @@ The site presents Tucker as an engineer who builds complex systems that people c
 
 - Co-primary audiences: engineering hiring managers and prospective clients.
 - The experience must help hiring managers assess engineering judgment and help clients assess credibility, relevance, and ability to deliver.
-- Until a more specific conversion is approved, the primary conversion is a qualified contact through the site's contact links.
+- The approved conversion model is dual-path qualified contact: “Discuss a role” for hiring managers and “Discuss a project” for prospective clients.
+- Both paths use email with distinct subject lines until a more reliable or useful contact mechanism earns adoption.
 - When the audiences need different evidence, preserve a clear shared narrative and make the evidence easy to scan rather than creating two disconnected sites.
 
 ## Product authority
@@ -63,8 +64,7 @@ When comparison requires inspecting the live incumbent, use current evidence fro
 
 ## Decisions needed from the owner
 
-- Whether engineering hiring managers or prospective clients should receive priority when their needs conflict.
-- Whether qualified contact should remain the primary conversion after the first experience review.
+- Whether engineering hiring managers or prospective clients should receive priority when their needs materially conflict.
 - Hosting provider and production URL, when the candidate earns promotion.
 - Which portfolio claims and projects are current and publicly supportable.
 
