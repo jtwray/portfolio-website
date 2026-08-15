@@ -544,6 +544,217 @@ body:before {
   }
 }
 
+/* Engineering system history */
+.experience-console {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(21, 26, 35, 0.72),
+    rgba(9, 11, 15, 0.82)
+  );
+}
+.console-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--line);
+  color: #687381;
+  font:
+    700 0.65rem ui-monospace,
+    monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.console-head span:first-child {
+  color: var(--accent);
+}
+.experience-entry {
+  border-bottom: 1px solid var(--line);
+}
+.experience-entry:last-child {
+  border-bottom: 0;
+}
+.experience-entry summary {
+  display: grid;
+  grid-template-columns: 48px 135px 1fr 30px;
+  gap: 20px;
+  align-items: center;
+  min-height: 108px;
+  padding: 18px 24px;
+  list-style: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.experience-entry summary::-webkit-details-marker {
+  display: none;
+}
+.experience-entry summary:hover,
+.experience-entry summary:focus-visible {
+  background: rgba(255, 255, 255, 0.025);
+}
+.experience-entry summary:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: -3px;
+}
+.experience-marker {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: #737e8b;
+  font:
+    700 0.68rem ui-monospace,
+    monospace;
+}
+.experience-entry[open] .experience-marker {
+  color: #091008;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.experience-date {
+  color: var(--muted);
+  font:
+    600 0.72rem ui-monospace,
+    monospace;
+}
+.experience-title strong {
+  display: block;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+.experience-title small {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent2);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.experience-toggle {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.experience-toggle::before,
+.experience-toggle::after {
+  content: "";
+  position: absolute;
+  background: var(--muted);
+  transition: transform 0.2s;
+}
+.experience-toggle::before {
+  left: 0;
+  top: 7px;
+  width: 16px;
+  height: 1px;
+}
+.experience-toggle::after {
+  left: 7px;
+  top: 0;
+  width: 1px;
+  height: 16px;
+}
+.experience-entry[open] .experience-toggle::after {
+  transform: rotate(90deg);
+}
+.experience-body {
+  padding: 0 24px 34px 227px;
+}
+.experience-body > p {
+  max-width: 760px;
+  margin: 0 0 28px;
+  color: #b0bac5;
+  font-size: 1rem;
+}
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.experience-grid > div {
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+}
+.experience-grid > div > span {
+  color: #687381;
+  font:
+    700 0.64rem ui-monospace,
+    monospace;
+  letter-spacing: 0.12em;
+}
+.experience-grid ul {
+  margin: 15px 0 0;
+  padding-left: 18px;
+  color: #aeb8c3;
+}
+.experience-grid li {
+  padding: 4px 0;
+  font-size: 0.84rem;
+}
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0 !important;
+  list-style: none;
+}
+.experience-tech li {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #c6cdd5;
+  font:
+    600 0.68rem ui-monospace,
+    monospace;
+}
+@media (max-width: 850px) {
+  .experience-entry summary {
+    grid-template-columns: 42px 1fr 24px;
+    gap: 14px;
+  }
+  .experience-date {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+  }
+  .experience-title {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 23px;
+  }
+  .experience-toggle {
+    grid-column: 3;
+  }
+  .experience-body {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .console-head span:last-child {
+    display: none;
+  }
+  .experience-entry summary {
+    padding: 18px 16px;
+  }
+  .experience-body {
+    padding: 0 18px 28px;
+  }
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-entry summary,
+  .experience-toggle::after {
+    transition: none;
+  }
+}
+
 /* Interactive engineering system */
 .system-map {
   border: 1px solid var(--line);
