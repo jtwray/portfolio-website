@@ -18,11 +18,14 @@ Status meanings:
 
 ### Shelter Gaze / ShelterHub
 
-Status: `supported`
+Status: `remove`
 
-Published claim:
+Decision:
 
-> A team-built mapping experience designed to help migrants in New York City find nearby shelters and essential location information.
+- Removed from selected work at the owner's request.
+- The product framing is politically ambiguous and is not useful to the owner's career positioning.
+- The public README's contributor presentation conflicts with the owner's recollection of sole implementation responsibility. Do not publish an authorship claim without resolving that discrepancy.
+- Retain no public-facing description unless the owner later approves a neutral, technically focused case study.
 
 Evidence:
 
@@ -31,30 +34,26 @@ Evidence:
 - `package.json` supports React, Vite, Mapbox, MapLibre, and react-map-gl.
 - README names James as one of five contributors, so the portfolio says “team-built” rather than implying sole authorship.
 
-Correction made:
-
-- Replaced the inaccurate animal-shelter description.
-- Removed unsupported Node/PostgreSQL tags.
-- Added a direct repository link.
-
 ### WAMIF
 
-Status: `supported`, deliberately narrow
+Status: `supported by owner-confirmed local source`
 
 Published claim:
 
-> Watch Familial Migration Interface—an early exploration of how family migration could be made easier to follow visually.
+> A React and Next.js application that parses GEDCOM genealogy files into connected people and events, then maps family movement across place and time.
 
 Evidence:
 
-- Public repository: `https://github.com/jtwray/wamif`
-- README expands WAMIF as “Watch Familial Migration InterFace.”
-- The repository does not currently provide code or documentation supporting GEDCOM, React, graph-data, or implemented mapping claims.
+- Current local project: `C:\Users\hp\Desktop\localprojects\cursorprojects\wamif`
+- Contains a GEDCOM family-tree file and GEDCOM parser integration.
+- Contains React/Next.js components, file-upload parsing, connected people/event data, map-state logic, and parser/upload tests.
+- Uses Mapbox and graph-oriented people/event relationships.
+- The public `jtwray/wamif` repository is not the current implementation and must not be linked from the card.
 
 Correction made:
 
-- Removed unsupported technology and implementation claims.
-- Added a direct repository link.
+- Restored GEDCOM parsing, graph-data, React/Next.js, and Mapbox claims from the current local source.
+- Replaced the incorrect public-repository link with the contact path until the current implementation has an approved public location.
 
 ### NurtureTrack
 
@@ -89,59 +88,51 @@ Public search did not independently substantiate the employer-specific details b
 
 ### KForce / LexisNexis
 
-Status: `pending`
+Status: `resume-supported`; confidentiality confirmation remains prudent
 
 Confirm each item:
 
 - Title: Software Engineer II.
-- Dates: 2024–2025.
-- Context may be described as LexisNexis public-safety systems.
-- Work covered multi-tenant web and mobile applications.
-- React and React Native product development.
-- ETL and webhook workflow support.
-- Production fixes and regression testing.
-- Cross-stack onboarding documentation.
-- Technology exposure: TypeScript, C#/.NET, Java/Groovy, Node.js, PostgreSQL/T-SQL, AWS, Cypress, and Cucumber.
-- Employer/client naming and this level of technical specificity do not violate confidentiality obligations.
+- Dates: Apr 2024–Jan 2025.
+- KForce, LexisNexis, multi-tenant public-safety systems, React/React Native, TypeScript, .NET/C#, T-SQL/PostgreSQL, Java, ETL, AWS, production troubleshooting, and cross-team delivery are supported by the July 2026 software-engineer resume.
+- Groovy, Cypress, and Cucumber were removed from the portfolio because this resume does not substantiate them.
+- “Webhook workflow” and KForce onboarding-documentation wording were replaced by resume-supported notification-workflow and cross-team-delivery language.
+- Owner should still confirm that employer/client naming and this specificity comply with confidentiality obligations.
 
 ### USPS Click-N-Ship v2
 
-Status: `pending`
+Status: `resume-supported`
 
 Confirm each item:
 
-- Title: React Developer.
-- Dates: 2022–2023.
-- The product may be named publicly.
-- Work included shipping history, multiple profiles, cart behavior, payments, persistent table columns, and feature-flagged delivery.
-- Technology exposure: React, TypeScript, React Query, GraphQL, Node.js, Azure, Jenkins, Cypress, and React Testing Library.
-- The current wording does not imply sole ownership of team-delivered capabilities.
+- Title: React Developer at Expedite Technology Solutions (USPS).
+- Dates: May 2022–Jan 2023.
+- Click-N-Ship, shipping history, searchable tables, user preferences, payment integration, persistent columns, feature delivery, React, TypeScript, React Query, Styled Components, MSW, and PayPal SDK are resume-supported.
+- Unsupported GraphQL, Node.js, Azure, Jenkins, Cypress, and React Testing Library tags were removed from this entry.
 
 ### Healthcare provider-search modernization
 
-Status: `pending`
+Status: `resume-supported`
 
 Confirm each item:
 
-- Work involved provider-search applications.
-- React interfaces operated within existing .NET MVC systems.
-- Work involved API-driven search and large provider datasets.
-- Technology exposure: React, JavaScript, C#, .NET MVC, REST APIs, and relational data.
-- Keeping the employer/client unnamed is intentional and sufficient for confidentiality.
+- Role: React / .NET Developer at The Health Plan, Jan–Nov 2021.
+- React interfaces inside C#/.NET MVC applications, provider search, API-driven workflows, address validation, geolocation, Mapbox, AWS S3, and GCP are resume-supported.
+- The portfolio now uses the resume-supported employer and dates.
 
 ### Lambda School / BloomTech mentorship
 
-Status: `pending`
+Status: `resume-supported`
 
 Confirm each item:
 
-- Role can be described as Engineering Mentor.
-- Dates: 2019–2020.
-- 1,600+ one-on-one code reviews.
-- 42+ junior developers mentored.
-- 20+ team sprints supported.
-- Two long-form Labs projects.
-- “Lambda School / BloomTech” is the clearest historically accurate naming.
+- Role: Team Lead / Technical Mentor / Practicum Product Lead.
+- Dates: Sep 2019–Mar 2021.
+- 1,200+ one-on-one code reviews.
+- 42 junior developers supported.
+- 17 cross-functional build sprints.
+- Two four-month product-lead engagements.
+- Portfolio figures and dates were corrected to match the resume.
 
 ## Cross-cutting claims
 
