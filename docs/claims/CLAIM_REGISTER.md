@@ -88,51 +88,60 @@ Public search did not independently substantiate the employer-specific details b
 
 ### KForce / LexisNexis
 
-Status: `resume-supported`; confidentiality confirmation remains prudent
+Status: `resume-supported and owner-confirmed`; confidentiality confirmation remains prudent
 
 Confirm each item:
 
 - Title: Software Engineer II.
 - Dates: Apr 2024–Jan 2025.
 - KForce, LexisNexis, multi-tenant public-safety systems, React/React Native, TypeScript, .NET/C#, T-SQL/PostgreSQL, Java, ETL, AWS, production troubleshooting, and cross-team delivery are supported by the July 2026 software-engineer resume.
-- Groovy, Cypress, and Cucumber were removed from the portfolio because this resume does not substantiate them.
-- “Webhook workflow” and KForce onboarding-documentation wording were replaced by resume-supported notification-workflow and cross-team-delivery language.
+- The owner directly confirms Groovy, Cypress, Cucumber, webhook workflows, and the other published technologies as accurate. They are retained as owner-confirmed experience even where the selected resume omits them.
+- Cross-team delivery wording remains because it communicates the work more clearly than an isolated tooling list.
 - Owner should still confirm that employer/client naming and this specificity comply with confidentiality obligations.
 
 ### USPS Click-N-Ship v2
 
-Status: `resume-supported`
+Status: `resume-supported and owner-confirmed`
 
 Confirm each item:
 
 - Title: React Developer at Expedite Technology Solutions (USPS).
 - Dates: May 2022–Jan 2023.
 - Click-N-Ship, shipping history, searchable tables, user preferences, payment integration, persistent columns, feature delivery, React, TypeScript, React Query, Styled Components, MSW, and PayPal SDK are resume-supported.
-- Unsupported GraphQL, Node.js, Azure, Jenkins, Cypress, and React Testing Library tags were removed from this entry.
+- The owner directly confirms GraphQL, Node.js, Azure, Jenkins, Cypress, and React Testing Library as accurate. They are retained as owner-confirmed experience even where the selected resume omits them.
 
 ### Healthcare provider-search modernization
 
-Status: `resume-supported`
+Status: `resume-supported and owner-confirmed`
 
 Confirm each item:
 
 - Role: React / .NET Developer at The Health Plan, Jan–Nov 2021.
 - React interfaces inside C#/.NET MVC applications, provider search, API-driven workflows, address validation, geolocation, Mapbox, AWS S3, and GCP are resume-supported.
+- The owner confirms the broader published technology stack, including relational-data work.
 - The portfolio now uses the resume-supported employer and dates.
 
 ### Lambda School / BloomTech mentorship
 
-Status: `resume-supported`
+Status: `owner-confirmed and workload-modeled`
 
 Confirm each item:
 
 - Role: Team Lead / Technical Mentor / Practicum Product Lead.
 - Dates: Sep 2019–Mar 2021.
-- 1,200+ one-on-one code reviews.
-- 42 junior developers supported.
-- 17 cross-functional build sprints.
+- Six cohorts, each with 8–12 direct student mentees: 48–72 direct mentees.
+- Each cohort contained three four-week units: nine learning weeks and three cross-functional sprint weeks per cohort.
+- Learning weeks required approximately 5–10 reviewed pull requests per student per week.
+- Conservative learning-week lower bound: `6 × 8 × 9 × 5 = 2,160` reviews.
+- Conservative sprint lower bound: `6 × 8 × 3 × 1 = 144` reviews.
+- Defensible combined lower bound: `2,304`; the portfolio rounds down to `2,300+ code reviews delivered`.
+- Modeled upper bound using 12 students and 10 learning-week reviews: `6,696`, but this is not published because it is less conservative.
+- Six cohorts × three final-week build sprints = 18 cross-functional build sprints.
+- The portfolio publishes `48+ direct student mentees`, the conservative lower bound.
 - Two four-month product-lead engagements.
-- Portfolio figures and dates were corrected to match the resume.
+- Dates and product-lead engagements remain resume-supported; workload counts use the owner's detailed cohort model.
+
+Calculation caveat: pull requests are counted as delivered code reviews only where the owner was responsible for reviewing the direct mentee's required project or sprint pull request. Repeat reviews and reviews for students outside the direct subgroup are excluded from the published lower bound.
 
 ## Cross-cutting claims
 
