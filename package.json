@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "check:static": "node scripts/check-static.mjs",
+    "verify": "npm run check:static && npm run build"
   },
   "devDependencies": {
     "vite": "^7.1.1"

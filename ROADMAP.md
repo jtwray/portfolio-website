@@ -39,8 +39,8 @@ Acceptance criteria:
 
 ### Slice 3: Repeatable release verification
 
-- [ ] Add automated checks appropriate to this static site.
-- [ ] Document local preview and smoke-test steps.
+- [x] Add automated checks appropriate to this static site.
+- [x] Document local preview and smoke-test steps.
 - [ ] Create a release record for the candidate commit.
 
 Acceptance criteria:
