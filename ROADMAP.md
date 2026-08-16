@@ -25,10 +25,10 @@ Acceptance criteria:
 
 ### Slice 2: Experience and accessibility baseline
 
-- [ ] Review the rendered site at narrow mobile, tablet, laptop, and wide desktop sizes.
-- [ ] Exercise navigation, project links, system-map controls, and contact actions.
-- [ ] Review semantic structure, keyboard use, focus, contrast, motion, and accessible names.
-- [ ] Fix only approved release-blocking findings.
+- [x] Review the rendered site at narrow mobile, tablet, laptop, and wide desktop sizes.
+- [x] Exercise navigation, project links, system-map controls, and contact actions.
+- [x] Review semantic structure, keyboard use, focus, contrast, motion, and accessible names.
+- [x] Fix only approved release-blocking findings.
 
 Acceptance criteria:
 
@@ -82,3 +82,4 @@ Acceptance criteria:
 - [x] Current branch, audience, local-only status, and incumbent benchmark are recorded.
 - [x] Slice 1 source, build, legacy-tree, and incumbent findings are recorded.
 - [x] Owner-approved legacy cleanup is isolated, recoverable through Git, and build-verified.
+- [x] Slice 2 responsive, interaction, and accessibility findings are recorded and release blockers fixed.

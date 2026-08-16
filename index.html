@@ -174,7 +174,10 @@
                 class="layer-tab is-active"
                 type="button"
                 role="tab"
+                id="layer-tab-ui"
+                aria-controls="system-detail"
                 aria-selected="true"
+                tabindex="0"
                 data-layer="ui"
               >
                 <span>01</span>UI
@@ -183,7 +186,10 @@
                 class="layer-tab"
                 type="button"
                 role="tab"
+                id="layer-tab-application"
+                aria-controls="system-detail"
                 aria-selected="false"
+                tabindex="-1"
                 data-layer="application"
               >
                 <span>02</span>Application
@@ -192,7 +198,10 @@
                 class="layer-tab"
                 type="button"
                 role="tab"
+                id="layer-tab-data"
+                aria-controls="system-detail"
                 aria-selected="false"
+                tabindex="-1"
                 data-layer="data"
               >
                 <span>03</span>Data
@@ -201,7 +210,10 @@
                 class="layer-tab"
                 type="button"
                 role="tab"
+                id="layer-tab-cloud"
+                aria-controls="system-detail"
                 aria-selected="false"
+                tabindex="-1"
                 data-layer="cloud"
               >
                 <span>04</span>Cloud
@@ -210,7 +222,10 @@
                 class="layer-tab"
                 type="button"
                 role="tab"
+                id="layer-tab-quality"
+                aria-controls="system-detail"
                 aria-selected="false"
+                tabindex="-1"
                 data-layer="quality"
               >
                 <span>05</span>Quality
@@ -263,7 +278,13 @@
                 >
               </button>
             </div>
-            <div class="system-detail" aria-live="polite">
+            <div
+              class="system-detail"
+              id="system-detail"
+              role="tabpanel"
+              aria-labelledby="layer-tab-ui"
+              aria-live="polite"
+            >
               <div class="detail-heading">
                 <span class="detail-status"
                   ><i></i><span data-detail-status>Layer 01 online</span></span
@@ -611,12 +632,14 @@
               control.dataset.layer === layer,
             ),
           );
-          tabs.forEach((tab) =>
-            tab.setAttribute(
-              "aria-selected",
-              String(tab.dataset.layer === layer),
-            ),
-          );
+          tabs.forEach((tab) => {
+            const isActive = tab.dataset.layer === layer;
+            tab.setAttribute("aria-selected", String(isActive));
+            tab.tabIndex = isActive ? 0 : -1;
+          });
+          const activeTab = tabs.find((tab) => tab.dataset.layer === layer);
+          const detail = systemMap.querySelector("#system-detail");
+          detail.setAttribute("aria-labelledby", activeTab.id);
           systemMap.querySelector("[data-detail-status]").textContent =
             data.status;
           systemMap.querySelector("[data-detail-title]").textContent =
