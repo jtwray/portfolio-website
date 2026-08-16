@@ -2,6 +2,7 @@
 
 - Candidate branch: `codex/experience-system-history`
 - Tested code commit: `38bd72a`
+- Netlify-configured preview commit: `bd7fe0a`
 - Release-record commit: documentation-only successor to `38bd72a`
 - Intended environment: local Vite production preview
 - Preview URL used: `http://127.0.0.1:4176/`
@@ -61,10 +62,29 @@ Promotion recommendation: **the candidate has earned an owner-reviewed hosted pr
 
 ## Deployment
 
-- Deployed commit: none
-- Deployment result: not attempted
-- Production smoke test: not applicable
-- Required authority: owner approval before hosting selection, external preview publication, merge, or production deployment
+- Hosting provider: Netlify
+- Test site: `tucker-wray-portfolio-test-20260815`
+- Site ID: `c43c3976-4827-40ed-8df5-c9e55a827732`
+- Draft deploy ID: `6a812d492db1afb97ffa3d00`
+- Draft deploy URL: `https://6a812d492db1afb97ffa3d00--tucker-wray-portfolio-test-20260815.netlify.app`
+- Netlify state: `ready`
+- Deploy context: `deploy-preview`
+- Deployed artifact source: locally verified `dist/` built from `bd7fe0a`
+- Deploy message: `Portfolio test release bd7fe0a`
+- Production deployment: not attempted
+- Incumbent production site and domain: unchanged
+
+Hosted-preview smoke evidence:
+
+- Work, Stack, Experience, and Contact navigation remained visible at 375, 768, 1440, and 1920 pixels.
+- No horizontal overflow occurred at any checked width.
+- All project images loaded with non-zero intrinsic dimensions.
+- All internal fragment targets resolved.
+- Right Arrow moved system-tab focus, selected state, panel labeling, and content to Application.
+- Project demo/source URLs and both qualified email subjects were present.
+- The deployed social preview loaded at 1200×630.
+
+Required next authority: owner review and explicit approval before merge or any production deployment.
 
 ## Rollback
 

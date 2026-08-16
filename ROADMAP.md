@@ -52,9 +52,9 @@ Acceptance criteria:
 ### Slice 4: Preview, merge, deploy, confirm
 
 - [x] Decide whether the local candidate has earned a hosted preview.
-- [ ] Select hosting only after that decision.
-- [ ] Publish a preview of the release candidate.
-- [ ] Review the integrated diff and preview.
+- [x] Select hosting only after that decision.
+- [x] Publish a preview of the release candidate.
+- [x] Review the integrated diff and preview.
 - [ ] Obtain owner approval to merge and deploy.
 - [ ] Confirm the deployed commit and run the production smoke test.
 
@@ -113,3 +113,4 @@ Acceptance criteria:
 - [x] Search and social metadata, branded preview artwork, and favicon are locally verified; canonical production URLs remain deferred until hosting.
 - [x] The obsolete course-assignment README is replaced by the current product, evidence, development, verification, and release guide.
 - [x] Integrated candidate `38bd72a` passes automated and production-preview verification and has earned an owner-reviewed hosted preview.
+- [x] Standalone Netlify draft deploy `6a812d492db1afb97ffa3d00` publishes tested source commit `bd7fe0a` without modifying the incumbent production site.
