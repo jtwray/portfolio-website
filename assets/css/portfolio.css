@@ -256,7 +256,7 @@ body:before {
 .project {
   grid-column: span 6;
   min-height: 360px;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: linear-gradient(145deg, var(--panel), rgba(16, 20, 27, 0.45));
@@ -273,23 +273,23 @@ body:before {
 .project.small {
   grid-column: span 4;
 }
-.project:after {
-  content: "↗";
-  position: absolute;
-  right: 26px;
-  top: 24px;
-  font-size: 1.5rem;
-  color: var(--muted);
-  transition: 0.3s;
-}
 .project:hover {
   transform: translateY(-6px);
   border-color: rgba(184, 255, 90, 0.4);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
 }
-.project:hover:after {
-  color: var(--accent);
-  transform: translate(4px, -4px);
+.project-media {
+  width: 100%;
+  height: 180px;
+  display: block;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+}
+.project.feature .project-media {
+  height: 210px;
 }
 .project .num {
   font:
@@ -300,7 +300,10 @@ body:before {
 .project h3 {
   font-size: 2.3rem;
   letter-spacing: -0.05em;
-  margin: 70px 0 12px;
+  margin: 18px 0 12px;
+}
+.project-no-media h3 {
+  margin-top: 70px;
 }
 .project p {
   color: var(--muted);
@@ -320,6 +323,24 @@ body:before {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: #b7c0ca;
+}
+.project-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+.project-actions a {
+  color: var(--text);
+  font:
+    700 0.76rem ui-monospace,
+    monospace;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.project-actions a:hover {
+  color: var(--accent);
 }
 .stack {
   display: grid;

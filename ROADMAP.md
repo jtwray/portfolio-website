@@ -84,3 +84,4 @@ Acceptance criteria:
 - [x] Owner-approved legacy cleanup is isolated, recoverable through Git, and build-verified.
 - [x] Slice 2 responsive, interaction, and accessibility findings are recorded and release blockers fixed.
 - [x] Slice 3 provides one automated release gate, a production-preview checklist, and a candidate release record.
+- [x] Selected work now uses verified WAMIF, LightningJS Movies, and Cellular Automata demos, repositories, and screenshots instead of generic project links.

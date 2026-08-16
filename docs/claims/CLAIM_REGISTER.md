@@ -36,7 +36,7 @@ Evidence:
 
 ### WAMIF
 
-Status: `supported by owner-confirmed local source`
+Status: `supported by local source, working demo, screenshots, and public repository`
 
 Published claim:
 
@@ -44,20 +44,54 @@ Published claim:
 
 Evidence:
 
-- Current local project: `C:\Users\hp\Desktop\localprojects\cursorprojects\wamif`
+- Deployed demo verified at `https://wamif.netlify.app/` with GEDCOM upload, Mapbox visualization, event types, and connected events.
+- Public repository verified at `https://github.com/jtwray/wamifnextv2`.
+- Matching local public-repository checkout: `C:\Users\hp\Desktop\localprojects\nextjsprojects\wamif-next`.
+- Substantial later local iterations also exist at `C:\Users\hp\Desktop\localprojects\cursorprojects\wamif` and `C:\Users\hp\Desktop\localprojects\localreact\wamif26`.
 - Contains a GEDCOM family-tree file and GEDCOM parser integration.
 - Contains React/Next.js components, file-upload parsing, connected people/event data, map-state logic, and parser/upload tests.
 - Uses Mapbox and graph-oriented people/event relationships.
-- The public `jtwray/wamif` repository is not the current implementation and must not be linked from the card.
+- `jtwray/wamif-nextjs` returns 404 and must not be linked from the card.
 
 Correction made:
 
 - Restored GEDCOM parsing, graph-data, React/Next.js, and Mapbox claims from the current local source.
-- Replaced the incorrect public-repository link with the contact path until the current implementation has an approved public location.
+- Replaced the temporary contact path with the verified live demo and `jtwray/wamifnextv2` source links.
+
+### LightningJS Movies
+
+Status: `supported by working deployment, screenshot, public repository, and local project registry`
+
+Published claim:
+
+> A remote-friendly movie browser built for television interfaces, with discovery, detail, favorites, and similar-title flows.
+
+Evidence:
+
+- Deployed URL: `https://jtwray-lightningjsmoviedb.netlify.app/#home`.
+- Public source: `https://github.com/jtwray/lightningjs-movies`.
+- Repository uses LightningJS and documents the TMDB API integration.
+- Local project registry records discovery, details, favorites, carousel navigation, and television-oriented interaction.
+- Local screenshots show movie detail and carousel interfaces.
+
+### Cellular Automata
+
+Status: `supported by working deployment, public repository, screenshot, and local source`
+
+Published claim:
+
+> An interactive Conway's Game of Life implementation for exploring state transitions, generations, population, speed, and grid scale.
+
+Evidence:
+
+- Deployed URL: `https://cellularautomata.netlify.app/game`.
+- Public source: `https://github.com/jtwray/golFInal`.
+- Local source contains React state, grid generation, next-generation calculation, animation-loop, size, speed, and history utilities.
+- The verified deployment exposes start, randomize, clear, step, size, speed, generation, population, lifespan, and timing controls.
 
 ### NurtureTrack
 
-Status: `pending`
+Status: `not currently published; pending stronger evidence`
 
 Current claims requiring owner confirmation:
 
@@ -71,7 +105,7 @@ Recommended evidence: repository, demo, screenshots, design notes, or an owner-c
 
 ### ERAE Rescue
 
-Status: `pending`
+Status: `not currently published; pending a sanitized case study or public result`
 
 Current claims requiring owner confirmation:
 
@@ -158,4 +192,4 @@ Confirm that these phrases fairly summarize the reviewed evidence:
 
 ## Next owner review
 
-Review the KForce / LexisNexis checklist first. For each bullet, answer `confirm`, `generalize`, `remove`, or provide corrected wording. After that, proceed through USPS, healthcare, mentorship, NurtureTrack, ERAE Rescue, and the cross-cutting claims.
+Review the KForce / LexisNexis checklist first. For each bullet, answer `confirm`, `generalize`, `remove`, or provide corrected wording. After that, proceed through USPS, healthcare, mentorship, and the cross-cutting claims. NurtureTrack and ERAE Rescue can return to selected work when stronger public or sanitized evidence is available.
