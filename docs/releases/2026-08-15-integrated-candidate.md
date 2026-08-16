@@ -67,15 +67,19 @@ Promotion recommendation: **the candidate has earned an owner-reviewed hosted pr
 - Site ID: `c43c3976-4827-40ed-8df5-c9e55a827732`
 - Draft deploy ID: `6a812d492db1afb97ffa3d00`
 - Draft deploy URL: `https://6a812d492db1afb97ffa3d00--tucker-wray-portfolio-test-20260815.netlify.app`
+- Project-card polish commit: `a96efff`
+- Current draft deploy ID: `6a8131d6139f4743a078bfd5`
+- Current draft deploy URL: `https://6a8131d6139f4743a078bfd5--tucker-wray-portfolio-test-20260815.netlify.app`
 - Netlify state: `ready`
 - Deploy context: `deploy-preview`
-- Deployed artifact source: locally verified `dist/` built from `bd7fe0a`
-- Deploy message: `Portfolio test release bd7fe0a`
+- Deployed artifact source: locally verified `dist/` built from `a96efff`
+- Deploy message: `Portfolio project-card polish a96efff`
 - Production deployment: not attempted
 - Incumbent production site and domain: unchanged
 
 Hosted-preview smoke evidence:
 
+- The current immutable draft returned HTTP 200 and contained the new enterprise and WAMIF card variants.
 - Work, Stack, Experience, and Contact navigation remained visible at 375, 768, 1440, and 1920 pixels.
 - No horizontal overflow occurred at any checked width.
 - All project images loaded with non-zero intrinsic dimensions.
