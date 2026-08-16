@@ -76,10 +76,13 @@ Promotion recommendation: **the candidate has earned an owner-reviewed hosted pr
 - Interaction Lab commit: `395aeb9`
 - Interaction Lab draft deploy ID: `6a8136e5ccdba03ace439b5f`
 - Interaction Lab draft URL: `https://6a8136e5ccdba03ace439b5f--tucker-wray-portfolio-test-20260815.netlify.app`
+- WAMIF case-study commit: `3e7fb2f`
+- WAMIF case-study draft deploy ID: `6a81382737d95162ef359687`
+- WAMIF case-study draft URL: `https://6a81382737d95162ef359687--tucker-wray-portfolio-test-20260815.netlify.app/wamif`
 - Netlify state: `ready`
 - Deploy context: `deploy-preview`
-- Deployed artifact source: locally verified `dist/` built from `395aeb9`
-- Deploy message: `Interaction Lab experiment 01 395aeb9`
+- Deployed artifact source: locally verified multi-page `dist/` built from `3e7fb2f`
+- Deploy message: `WAMIF case study 3e7fb2f`
 - Production deployment: not attempted
 - Incumbent production site and domain: unchanged
 
@@ -88,6 +91,7 @@ Hosted-preview smoke evidence:
 - The current immutable draft returned HTTP 200 and contained the new enterprise and WAMIF card variants.
 - The latest immutable draft returned HTTP 200, contained the WAMIF story control, and served all four hashed story images with HTTP 200 responses.
 - The Interaction Lab draft returned HTTP 200 and contained the orbit experiment, both explicit rotation controls, and the updated Contact section sequence.
+- The WAMIF case-study draft returned HTTP 200 for both the homepage and case-study document; the deployed page contained Architecture and Evidence targets plus the verified demo and source destinations. Netlify post-processing exposed the homepage route as `/wamif`.
 - Work, Stack, Experience, and Contact navigation remained visible at 375, 768, 1440, and 1920 pixels.
 - No horizontal overflow occurred at any checked width.
 - All project images loaded with non-zero intrinsic dimensions.
