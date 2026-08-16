@@ -70,16 +70,20 @@ Promotion recommendation: **the candidate has earned an owner-reviewed hosted pr
 - Project-card polish commit: `a96efff`
 - Current draft deploy ID: `6a8131d6139f4743a078bfd5`
 - Current draft deploy URL: `https://6a8131d6139f4743a078bfd5--tucker-wray-portfolio-test-20260815.netlify.app`
+- WAMIF story commit: `8d3cccd`
+- Latest draft deploy ID: `6a813452b436ad680b9d0de9`
+- Latest draft deploy URL: `https://6a813452b436ad680b9d0de9--tucker-wray-portfolio-test-20260815.netlify.app`
 - Netlify state: `ready`
 - Deploy context: `deploy-preview`
-- Deployed artifact source: locally verified `dist/` built from `a96efff`
-- Deploy message: `Portfolio project-card polish a96efff`
+- Deployed artifact source: locally verified `dist/` built from `8d3cccd`
+- Deploy message: `Interactive WAMIF product story 8d3cccd`
 - Production deployment: not attempted
 - Incumbent production site and domain: unchanged
 
 Hosted-preview smoke evidence:
 
 - The current immutable draft returned HTTP 200 and contained the new enterprise and WAMIF card variants.
+- The latest immutable draft returned HTTP 200, contained the WAMIF story control, and served all four hashed story images with HTTP 200 responses.
 - Work, Stack, Experience, and Contact navigation remained visible at 375, 768, 1440, and 1920 pixels.
 - No horizontal overflow occurred at any checked width.
 - All project images loaded with non-zero intrinsic dimensions.
