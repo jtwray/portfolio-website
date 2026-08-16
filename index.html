@@ -143,11 +143,23 @@
               </div>
             </article>
             <article class="project project-wamif reveal">
-              <img
-                class="project-media"
-                src="assets/images/projects/wamif-map.png"
-                alt="WAMIF displaying GEDCOM family events on an interactive Mapbox globe"
-              />
+              <figure class="wamif-story" data-wamif-story>
+                <div class="wamif-story-stage">
+                  <img class="project-media" src="assets/images/projects/wamif-map.png" alt="WAMIF displaying GEDCOM family events on an interactive Mapbox globe" data-wamif-image />
+                  <img class="project-media" src="assets/images/projects/wamif-geocoding.png" alt="WAMIF geocoding locations parsed from an uploaded GEDCOM file" data-wamif-image hidden />
+                  <img class="project-media" src="assets/images/projects/wamif-event-detail.png" alt="WAMIF Mapbox globe showing details for a selected marriage event" data-wamif-image hidden />
+                  <img class="project-media" src="assets/images/projects/wamif-connected-events.png" alt="WAMIF connected-events view filtered by event type and location" data-wamif-image hidden />
+                </div>
+                <figcaption aria-live="polite" data-wamif-caption>
+                  01 / 04 — Map GEDCOM events across place
+                </figcaption>
+                <div class="wamif-story-controls" role="tablist" aria-label="WAMIF product views">
+                  <button class="is-active" type="button" role="tab" aria-selected="true" data-wamif-frame="0">Map</button>
+                  <button type="button" role="tab" aria-selected="false" tabindex="-1" data-wamif-frame="1">Process</button>
+                  <button type="button" role="tab" aria-selected="false" tabindex="-1" data-wamif-frame="2">Inspect</button>
+                  <button type="button" role="tab" aria-selected="false" tabindex="-1" data-wamif-frame="3">Connect</button>
+                </div>
+              </figure>
               <div class="num">02 — DATA / VISUALIZATION</div>
               <h3>WAMIF</h3>
               <p>
@@ -633,6 +645,44 @@
         { threshold: 0.12 },
       );
       document.querySelectorAll(".reveal").forEach((e) => observer.observe(e));
+      const wamifStory = document.querySelector("[data-wamif-story]");
+      if (wamifStory) {
+        const frames = [
+          "01 / 04 — Map GEDCOM events across place",
+          "02 / 04 — Parse and geocode family records",
+          "03 / 04 — Inspect individual life events",
+          "04 / 04 — Explore relationships by location",
+        ];
+        const images = [...wamifStory.querySelectorAll("[data-wamif-image]")];
+        const caption = wamifStory.querySelector("[data-wamif-caption]");
+        const tabs = [...wamifStory.querySelectorAll("[data-wamif-frame]")];
+        const showFrame = (index, moveFocus = false) => {
+          images.forEach((image, imageIndex) => {
+            image.hidden = imageIndex !== index;
+          });
+          caption.textContent = frames[index];
+          tabs.forEach((tab, tabIndex) => {
+            const active = tabIndex === index;
+            tab.classList.toggle("is-active", active);
+            tab.setAttribute("aria-selected", String(active));
+            tab.tabIndex = active ? 0 : -1;
+          });
+          if (moveFocus) tabs[index].focus();
+        };
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => showFrame(index));
+          tab.addEventListener("keydown", (event) => {
+            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+            event.preventDefault();
+            const next = event.key === "Home"
+              ? 0
+              : event.key === "End"
+                ? tabs.length - 1
+                : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+            showFrame(next, true);
+          });
+        });
+      }
       const systemData = {
         ui: {
           status: "Layer 01 online",

@@ -295,6 +295,64 @@ body:before {
 .project-wamif .project-media {
   height: 240px;
 }
+.wamif-story {
+  margin: 0 0 22px;
+  padding: 0;
+}
+.wamif-story-stage {
+  background: #f3f4f6;
+}
+.wamif-story [hidden] {
+  display: none;
+}
+.wamif-story .project-media {
+  margin-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  transition: opacity 0.2s ease;
+}
+.wamif-story figcaption {
+  min-height: 36px;
+  padding: 10px 12px 8px;
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font: 600 0.66rem/1.35 ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.wamif-story-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 0 0 14px 14px;
+  overflow: hidden;
+}
+.wamif-story-controls button {
+  min-height: 36px;
+  padding: 8px 6px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--muted);
+  cursor: pointer;
+  font: 700 0.65rem ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.wamif-story-controls button:last-child {
+  border-right: 0;
+}
+.wamif-story-controls button:hover,
+.wamif-story-controls button.is-active {
+  background: rgba(184, 255, 90, 0.1);
+  color: var(--accent);
+}
+.wamif-story-controls button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
 .project .num {
   font:
     700 0.7rem ui-monospace,

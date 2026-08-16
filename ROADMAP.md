@@ -115,3 +115,4 @@ Acceptance criteria:
 - [x] Integrated candidate `38bd72a` passes automated and production-preview verification and has earned an owner-reviewed hosted preview.
 - [x] Standalone Netlify draft deploy `6a812d492db1afb97ffa3d00` publishes tested source commit `bd7fe0a` without modifying the incumbent production site.
 - [x] Selected-work cards use a balanced evidence grid, consistent media framing, and a non-confidential enterprise-system visual.
+- [x] WAMIF uses a four-state, keyboard-operable product story to demonstrate GEDCOM processing, mapping, event inspection, and connected-event exploration without autoplay media.
