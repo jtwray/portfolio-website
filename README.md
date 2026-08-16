@@ -1,54 +1,101 @@
-# Build A Portfolio Website
+# Tucker Wray portfolio
 
-With all of the projects you will be working on here at Lambda School, you will need somewhere to house them!  There is no better opportunity to learn and show off your skills than a beautiful portfolio website.  
+A static software-engineering portfolio for Tucker Wray. The site is designed for two primary audiences: engineering hiring managers evaluating technical judgment and prospective clients evaluating relevance and delivery credibility.
 
-You have the ability to write HTML, CSS, and responsive media queries.  You also know how to identify and write responsive units.  It's time to put that knowledge into action by reading someone else's code and adding your own flavor.  You will be building a portfolio website from a template found on [https://html5up.net/](https://html5up.net/).
+The current candidate is local-only. It must earn promotion over the incumbent at `https://tuckerwray.com`; this repository does not imply authorization to merge, host, or deploy it.
 
-## Project Set Up
+## Product scope
 
-### Follow these steps to set up and work on your project:
+The portfolio presents:
 
-_ Watch this walk through video:  https://youtu.be/P2Y9W29kcjs
+- evidence-backed selected work with direct demos and source links;
+- engineering breadth across interface, application, data, cloud, quality, and delivery;
+- resume-supported professional experience;
+- separate contact paths for employment opportunities and project inquiries.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on the `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+The canonical product brief is [`PROJECT.md`](PROJECT.md). Current delivery state and planned slices live in [`ROADMAP.md`](ROADMAP.md).
 
-### Follow these steps to download your template and start the project:
+## Technical shape
 
-- [ ] Navigate here: [https://html5up.net/](https://html5up.net/)
-- [ ] You make pick any template you like.  Here are some good choices for a portfolio:
-	- [https://html5up.net/story](https://html5up.net/story)
-	- [https://html5up.net/solid-state](https://html5up.net/solid-state)
-	- [https://html5up.net/miniport](https://html5up.net/miniport)
-	- [https://html5up.net/dimension](https://html5up.net/dimension)
+- Static HTML, CSS, and JavaScript
+- Vite development server and production build
+- No framework runtime, backend, database, analytics, or third-party tracking
+- Deployable output generated in `dist/`
 
-- [ ] Unzip the code and copy the site to your git repository that you just set up
-  * Note that we won't be utilizing the pre processed CSS structure, you can just ignore any folder with LESS or SASS (SCSS) in it.
-- [ ] Work on the MVP requirements listed below
+Canonical release source:
 
-### Follow these steps for completing your project after your MVP is completed:
+- `index.html` — document content and page behavior
+- `assets/css/portfolio.css` — visual system and responsive behavior
+- `assets/images/` — source-controlled interface and project artwork
+- `public/` — files that must retain stable root-relative production paths
+- `scripts/check-static.mjs` — dependency-free release integrity checks
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by merging the branch back into master.
+## Local development
 
-## MVP Requirements
+Use a current Node.js LTS release and install the locked dependency tree:
 
-- [ ] Study the code base and identify both responsive units and where media queries were used.  Take notes on anything that confuses you or interesting things you find.  Share this information in your standup meeting with your group
-- [ ] Customize the template to you 
-	- [ ] Update the title tag match your name
-	- [ ] Update the place holder content throughout the template to your information
-		* Some templates are much larger than others, you don't need to fill in every little div with information, just try to get the site representing you and your work 
-		* You can use sites like [https://www.pexels.com/](https://www.pexels.com/) for free images to fill in place holders
-		* Showcase projects you have worked on by providing some information and links to your git hub projects
-- [ ] Implement proper attribution: Attribution is required under the [creative commons license](https://html5up.net/license) that came with the website files you downloaded.  Be sure to provide attribution somewhere in the site.  The templates should already come with attribution found in most footers but double check to be sure.
-- [ ] Host your website for the world to see. Follow the instructions found here [https://pages.github.com/](https://pages.github.com/).  Once you have hosted your web page, share it for your peers to see.  This is not a small feat!
+```powershell
+npm ci
+```
 
-## Stretch
+Start the development server:
 
-- [ ] Study the JavaScript used in your template and see if you can tweak any of the behavior to see how it works
-- [ ] Download another template and see if you can get the CSS preprocessor working on the project
+```powershell
+npm run dev
+```
+
+Open the local URL printed by Vite. Source changes update automatically.
+
+## Verification
+
+Run the complete automated release gate:
+
+```powershell
+npm run verify
+```
+
+This command checks required source and public files, local references, internal anchors, unique IDs, baseline semantics, metadata, image alternative text, social-preview assets, and the qualified email path. It then creates the production build.
+
+Preview that exact build with:
+
+```powershell
+npm run preview
+```
+
+The required browser smoke test is documented in [`docs/RELEASE_WORKFLOW.md`](docs/RELEASE_WORKFLOW.md). A passing build alone is not proof that responsive layout, keyboard interaction, external evidence, or contact paths work.
+
+## Evidence and editorial policy
+
+Do not invent or infer professional history, metrics, ownership, client outcomes, or technology usage.
+
+- Published-claim status and supporting sources live in [`docs/claims/CLAIM_REGISTER.md`](docs/claims/CLAIM_REGISTER.md).
+- Employer claims should be checked against the resume and owner confirmation.
+- Project cards should link to the strongest verified demo, source, or sanitized case study.
+- Confidential work must remain appropriately generalized.
+- Unverified projects may remain local or planned but should not be represented as public evidence.
+
+## Git and delivery workflow
+
+1. Read `PROJECT.md`, `ROADMAP.md`, `AGENTS.md`, and current Git state.
+2. Select one outcome-oriented slice with explicit acceptance criteria and non-goals.
+3. Implement on a short-lived branch or isolated worktree.
+4. Review the integrated diff and run `npm run verify`.
+5. Exercise affected behavior in the production preview.
+6. Record remaining risks and candidate-versus-incumbent impact.
+7. Commit a cohesive, reviewable change.
+8. Obtain owner approval before merge, push, hosting changes, or deployment.
+
+Repository-specific agent and review safeguards are defined in [`AGENTS.md`](AGENTS.md).
+
+## Release states
+
+- **Implemented** — code changed; review or verification may remain.
+- **Verified** — acceptance criteria have supporting evidence and required checks pass.
+- **Ready to ship** — the integrated candidate has passed production-preview review and has a complete release record.
+- **Shipped** — the owner-approved commit is deployed and that exact production release passes smoke testing.
+
+Use [`docs/releases/TEMPLATE.md`](docs/releases/TEMPLATE.md) for each candidate release. Hosting provider, public origin, canonical URL, and production rollback procedure remain deliberately unset until the owner approves a hosted preview.
+
+## License
+
+See [`LICENSE.txt`](LICENSE.txt).
