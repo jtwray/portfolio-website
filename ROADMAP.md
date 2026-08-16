@@ -93,6 +93,74 @@ Acceptance criteria:
 - `npm run verify` passes and the exact draft deploy is smoke-tested.
 - The reviewer confirms that LightningJS strengthens, rather than weakens, the candidate’s credibility.
 
+### Slice: Employment evidence and timeline confidence
+
+Status: queued; owner approval is required for the resume artifact, dates, and any externally verifiable employment links.
+
+- [ ] Add an owner-approved resume download or stable resume-view link.
+- [ ] Reconcile the experience timeline after January 2025 and state the current target/availability without inventing a role or gap explanation.
+- [ ] Review employer, title, mentorship, cohort, code-review, and sprint-scale claims against the approved resume and claim register.
+- [ ] Add verification links only when they point to a stable, public source that actually supports the claim.
+- [ ] Preserve confidentiality for employer work and use calibrated wording where direct evidence cannot be published.
+
+Acceptance criteria:
+
+- A hiring manager can verify the current resume and understand the timeline without relying on inference.
+- Every quantified experience claim is either supported, explicitly qualified, or removed.
+- No confidential employer material is published.
+- The reviewer confirms improved trust without a reduction in role clarity.
+
+### Slice: WAMIF reproducible evidence path
+
+Status: queued; implementation should use synthetic or owner-approved sample data only.
+
+- [ ] Add a small safe sample GEDCOM fixture or a downloadable test file that contains no private family data.
+- [ ] Document the shortest reproducible path from upload to parse, geocode, map, and connected-event views.
+- [ ] Record expected loading, empty, malformed-file, and geocoding-failure states where they are verified.
+- [ ] Add a concise privacy note explaining that uploaded genealogy data can be sensitive and how the public demo handles it.
+- [ ] Keep future single-person movement timelines and broader feature work explicitly deferred unless separately approved.
+
+Acceptance criteria:
+
+- A reviewer can exercise the central WAMIF path without supplying personal data.
+- The case study distinguishes observed behavior from untested or future behavior.
+- Privacy and failure-state language is accurate and non-alarmist.
+- The exact draft passes build, link, and browser smoke checks.
+
+### Slice: Client engagement and delivery clarity
+
+Status: queued; owner approval is required for service boundaries, availability, and any budget/timeline language.
+
+- [ ] Add a concise “How I help” block describing discovery, scoping, build, launch, and post-launch support.
+- [ ] Explain the preferred project conversation and what information a prospective client should bring.
+- [ ] Add delivery context to at least one case study: responsibility, constraints, timeline, testing, and outcome where publishable.
+- [ ] Add a project-inquiry path that remains lightweight and does not promise an SLA or budget range without owner approval.
+- [ ] Keep employment and client messaging distinct while preserving one coherent portfolio narrative.
+
+Acceptance criteria:
+
+- A prospective client can understand the next step and the type of engagement available within one minute.
+- At least one project demonstrates delivery judgment, not only technical breadth.
+- No invented outcomes, testimonials, budgets, or client claims are published.
+- The client-oriented reviewer confirms improved selection confidence.
+
+### Slice: Technical focus and accessibility cleanup
+
+Status: queued; implementation is safe to begin after the owner confirms whether System Orbit remains part of the public portfolio.
+
+- [ ] Complete the WAMIF tab semantics with `aria-controls` and a corresponding tabpanel relationship.
+- [ ] Add explicit lazy-loading behavior to below-the-fold project and case-study images where it does not degrade the first meaningful view.
+- [ ] Decide whether to move System Orbit below Contact, reduce its visual weight, or remove it from the public candidate.
+- [ ] Add or document a skip-navigation path if the final information architecture warrants it.
+- [ ] Re-run reduced-motion, keyboard, mobile, and screen-reader-oriented checks after the changes.
+
+Acceptance criteria:
+
+- Interactive groups expose complete relationships to assistive technology.
+- Initial media loading is intentional and verified.
+- Primary hiring evidence remains visually dominant over experimental presentation.
+- The technical reviewer reports no new keyboard, responsive, motion, or semantic regression.
+
 ## Later
 
 - Consider analytics only after defining a measurement question and privacy policy.
