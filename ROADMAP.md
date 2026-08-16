@@ -41,7 +41,7 @@ Acceptance criteria:
 
 - [x] Add automated checks appropriate to this static site.
 - [x] Document local preview and smoke-test steps.
-- [ ] Create a release record for the candidate commit.
+- [x] Create a release record for the candidate commit.
 
 Acceptance criteria:
 
@@ -83,3 +83,4 @@ Acceptance criteria:
 - [x] Slice 1 source, build, legacy-tree, and incumbent findings are recorded.
 - [x] Owner-approved legacy cleanup is isolated, recoverable through Git, and build-verified.
 - [x] Slice 2 responsive, interaction, and accessibility findings are recorded and release blockers fixed.
+- [x] Slice 3 provides one automated release gate, a production-preview checklist, and a candidate release record.
