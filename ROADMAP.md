@@ -51,7 +51,7 @@ Acceptance criteria:
 
 ### Slice 4: Preview, merge, deploy, confirm
 
-- [ ] Decide whether the local candidate has earned a hosted preview.
+- [x] Decide whether the local candidate has earned a hosted preview.
 - [ ] Select hosting only after that decision.
 - [ ] Publish a preview of the release candidate.
 - [ ] Review the integrated diff and preview.
@@ -112,3 +112,4 @@ Acceptance criteria:
 - [x] Selected work now uses verified WAMIF, LightningJS Movies, and Cellular Automata demos, repositories, and screenshots instead of generic project links.
 - [x] Search and social metadata, branded preview artwork, and favicon are locally verified; canonical production URLs remain deferred until hosting.
 - [x] The obsolete course-assignment README is replaced by the current product, evidence, development, verification, and release guide.
+- [x] Integrated candidate `38bd72a` passes automated and production-preview verification and has earned an owner-reviewed hosted preview.
