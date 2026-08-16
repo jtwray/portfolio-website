@@ -73,10 +73,13 @@ Promotion recommendation: **the candidate has earned an owner-reviewed hosted pr
 - WAMIF story commit: `8d3cccd`
 - Latest draft deploy ID: `6a813452b436ad680b9d0de9`
 - Latest draft deploy URL: `https://6a813452b436ad680b9d0de9--tucker-wray-portfolio-test-20260815.netlify.app`
+- Interaction Lab commit: `395aeb9`
+- Interaction Lab draft deploy ID: `6a8136e5ccdba03ace439b5f`
+- Interaction Lab draft URL: `https://6a8136e5ccdba03ace439b5f--tucker-wray-portfolio-test-20260815.netlify.app`
 - Netlify state: `ready`
 - Deploy context: `deploy-preview`
-- Deployed artifact source: locally verified `dist/` built from `8d3cccd`
-- Deploy message: `Interactive WAMIF product story 8d3cccd`
+- Deployed artifact source: locally verified `dist/` built from `395aeb9`
+- Deploy message: `Interaction Lab experiment 01 395aeb9`
 - Production deployment: not attempted
 - Incumbent production site and domain: unchanged
 
@@ -84,6 +87,7 @@ Hosted-preview smoke evidence:
 
 - The current immutable draft returned HTTP 200 and contained the new enterprise and WAMIF card variants.
 - The latest immutable draft returned HTTP 200, contained the WAMIF story control, and served all four hashed story images with HTTP 200 responses.
+- The Interaction Lab draft returned HTTP 200 and contained the orbit experiment, both explicit rotation controls, and the updated Contact section sequence.
 - Work, Stack, Experience, and Contact navigation remained visible at 375, 768, 1440, and 1920 pixels.
 - No horizontal overflow occurred at any checked width.
 - All project images loaded with non-zero intrinsic dimensions.
