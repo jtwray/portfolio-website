@@ -509,6 +509,49 @@ body:before {
   color: var(--muted);
   font-size: 0.85rem;
 }
+.interaction-lab { overflow: hidden; }
+.lab-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: 54px;
+  min-height: 520px;
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: radial-gradient(circle at 78% 45%, rgba(112, 225, 255, 0.1), transparent 34%), linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  align-items: center;
+}
+.lab-copy h3 { margin: 18px 0 12px; font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.06em; line-height: 0.95; }
+.lab-copy > p:not(.lab-status) { max-width: 540px; color: var(--muted); }
+.lab-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.lab-controls button {
+  min-height: 42px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035); color: var(--text); cursor: pointer;
+  font: 700 0.7rem ui-monospace, monospace; letter-spacing: 0.07em; text-transform: uppercase;
+}
+.lab-controls button:hover { border-color: rgba(184, 255, 90, 0.55); color: var(--accent); }
+.lab-status { margin: 16px 0 0; color: var(--accent2); font: 700 0.68rem ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.orbit-stage { position: relative; min-height: 400px; perspective: 1100px; display: grid; place-items: center; }
+.orbit-stage:before {
+  content: ""; position: absolute; width: 330px; height: 330px; border: 1px solid rgba(112, 225, 255, 0.17);
+  border-radius: 50%; transform: rotateX(72deg); box-shadow: 0 0 60px rgba(112, 225, 255, 0.08);
+}
+.orbit-wheel {
+  --rotation: 0deg; position: absolute; width: 150px; height: 80px; transform-style: preserve-3d;
+  transform: rotateX(-7deg) rotateY(var(--rotation)); transition: transform 0.65s cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+.orbit-wheel span {
+  position: absolute; inset: 0; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px; background: rgba(16, 20, 27, 0.9); box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  color: var(--text); font: 700 0.72rem ui-monospace, monospace; letter-spacing: 0.06em; text-transform: uppercase;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(215px); backface-visibility: hidden;
+}
+.orbit-core {
+  position: relative; z-index: 2; display: grid; place-items: center; width: 92px; height: 92px;
+  border: 1px solid rgba(184, 255, 90, 0.4); border-radius: 50%; background: var(--panel);
+  box-shadow: 0 0 50px rgba(184, 255, 90, 0.13); font: 800 1rem ui-monospace, monospace; letter-spacing: -0.04em;
+}
+.orbit-core span { color: var(--accent); }
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -545,9 +588,11 @@ body:before {
 }
 @media (max-width: 850px) {
   .hero-grid,
-  .contact {
+  .contact,
+  .lab-card {
     grid-template-columns: 1fr;
   }
+  .lab-card { gap: 20px; }
   .hero h1 {
     font-size: clamp(3.8rem, 16vw, 6rem);
   }
@@ -636,6 +681,8 @@ body:before {
   .project h3 {
     margin-top: 55px;
   }
+  .lab-card { min-height: 0; padding: 26px 20px; }
+  .orbit-stage { min-height: 330px; transform: scale(0.82); margin: -20px -42px; }
   .footer {
     display: block;
   }
@@ -653,7 +700,8 @@ body:before {
     transition: none;
   }
   .project,
-  .btn {
+  .btn,
+  .orbit-wheel {
     transition: none;
   }
 }

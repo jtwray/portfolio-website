@@ -77,13 +77,13 @@ Acceptance criteria:
 
 ### Slice: Curated Interaction Lab
 
-- [ ] Inventory the original source and public URL for each candidate experiment.
-- [ ] Select no more than three experiments that demonstrate distinct engineering ideas.
+- [x] Inventory the original source and public URL for each candidate experiment.
+- [x] Select no more than three experiments that demonstrate distinct engineering ideas; begin with the locally supported 3D text carousel.
 - [ ] Rebuild or polish selected experiments to match the portfolio's visual system.
 - [ ] Replace copyrighted characters and unclear novelty framing with original, professional presentation.
 - [ ] Add keyboard, touch, responsive, reduced-motion, and loading/failure behavior.
-- [ ] Present the collection as a compact “Interaction Lab” after Experience and before Contact.
-- [ ] Keep experiments subordinate to primary project evidence and qualified-contact paths.
+- [x] Present the initial experiment as a compact “Interaction Lab” after Experience and before Contact.
+- [x] Keep experiments subordinate to primary project evidence and qualified-contact paths.
 
 Candidate order:
 
