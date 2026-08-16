@@ -114,7 +114,7 @@ Acceptance criteria:
 
 Status: queued; implementation should use synthetic or owner-approved sample data only.
 
-- [ ] Add a small safe sample GEDCOM fixture or a downloadable test file that contains no private family data.
+- [ ] Add a small safe sample GEDCOM fixture or a downloadable test file that contains no private family data. Original family data must remain under ignored `private-input/`; only a reviewed pseudo-data derivative may enter the public build.
 - [ ] Document the shortest reproducible path from upload to parse, geocode, map, and connected-event views.
 - [ ] Record expected loading, empty, malformed-file, and geocoding-failure states where they are verified.
 - [ ] Add a concise privacy note explaining that uploaded genealogy data can be sensitive and how the public demo handles it.
