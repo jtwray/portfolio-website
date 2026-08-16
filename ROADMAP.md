@@ -67,7 +67,7 @@ Acceptance criteria:
 ## Next
 
 - Strengthen project case-study evidence and external links.
-- Improve metadata, social sharing, and discoverability.
+- [x] Improve metadata, social sharing, and discoverability without inventing a production origin.
 - Replace the legacy README with current contributor and release instructions.
 
 ## Later
@@ -110,3 +110,4 @@ Acceptance criteria:
 - [x] Slice 2 responsive, interaction, and accessibility findings are recorded and release blockers fixed.
 - [x] Slice 3 provides one automated release gate, a production-preview checklist, and a candidate release record.
 - [x] Selected work now uses verified WAMIF, LightningJS Movies, and Cellular Automata demos, repositories, and screenshots instead of generic project links.
+- [x] Search and social metadata, branded preview artwork, and favicon are locally verified; canonical production URLs remain deferred until hosting.

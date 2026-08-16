@@ -36,19 +36,25 @@ if (errors.length === 0) {
 
   const references = [
     ...html.matchAll(/\s(?:href|src)=["']([^"']+)["']/g),
+    ...html.matchAll(
+      /<meta\b[^>]*(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)["']/gi,
+    ),
     ...css.matchAll(/url\(["']?([^"')]+)["']?\)/g),
   ].map((match) => match[1]);
   const localReferences = references.filter(
     (reference) =>
       !reference.startsWith("#") &&
-      !reference.startsWith("/") &&
+      !reference.startsWith("//") &&
       !/^(?:https?:|mailto:|tel:|data:)/i.test(reference),
   );
   const missingAssets = [
     ...new Set(
       localReferences.filter((reference) => {
         const cleanPath = reference.split(/[?#]/, 1)[0];
-        return !existsSync(resolve(root, cleanPath));
+        const assetPath = cleanPath.startsWith("/")
+          ? resolve(root, "public", cleanPath.slice(1))
+          : resolve(root, cleanPath);
+        return !existsSync(assetPath);
       }),
     ),
   ];
@@ -70,6 +76,11 @@ if (errors.length === 0) {
     [/<main\b/i, "main landmark"],
     [/<h1\b/i, "primary heading"],
     [/href=["']mailto:[^"']+subject=/i, "qualified contact subject"],
+    [/property=["']og:title["']/i, "Open Graph title"],
+    [/property=["']og:description["']/i, "Open Graph description"],
+    [/property=["']og:image["']/i, "Open Graph image"],
+    [/name=["']twitter:card["']/i, "Twitter card metadata"],
+    [/rel=["']icon["']/i, "site icon"],
   ];
   requiredPatterns.forEach(([pattern, label]) => {
     if (!pattern.test(html)) errors.push(`Missing required ${label}`);

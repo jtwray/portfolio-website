@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Tucker Wray — Software Engineer</title>
+  <desc id="description">Complicated systems made useful across interface, application, data, cloud, and delivery.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090b0f"/>
+      <stop offset="1" stop-color="#151a23"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="18%" r="70%">
+      <stop offset="0" stop-color="#70e1ff" stop-opacity=".22"/>
+      <stop offset=".48" stop-color="#b8ff5a" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#090b0f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0v56" fill="none" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="72" y="64" width="1056" height="502" rx="28" fill="#10141b" fill-opacity=".72" stroke="#fff" stroke-opacity=".12"/>
+  <text x="116" y="130" fill="#b8ff5a" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="20" font-weight="700" letter-spacing="4">SOFTWARE ENGINEER / FULL STACK</text>
+  <text x="112" y="238" fill="#f3f5f7" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="-4">Tucker Wray</text>
+  <text x="116" y="324" fill="#f3f5f7" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="650">Complicated systems.</text>
+  <text x="116" y="379" fill="#9aa4b2" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="500">Made useful.</text>
+  <g transform="translate(116 456)" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="2">
+    <text x="0" fill="#70e1ff">INTERFACE</text>
+    <text x="155" fill="#9aa4b2">→</text>
+    <text x="197" fill="#f3f5f7">APPLICATION</text>
+    <text x="364" fill="#9aa4b2">→</text>
+    <text x="406" fill="#f3f5f7">DATA</text>
+    <text x="492" fill="#9aa4b2">→</text>
+    <text x="534" fill="#f3f5f7">CLOUD</text>
+    <text x="634" fill="#9aa4b2">→</text>
+    <text x="676" fill="#b8ff5a">DELIVERY</text>
+  </g>
+  <circle cx="1082" cy="108" r="8" fill="#b8ff5a"/>
+</svg>
