@@ -70,6 +70,29 @@ Acceptance criteria:
 - [x] Improve metadata, social sharing, and discoverability without inventing a production origin.
 - [x] Replace the legacy README with current contributor and release instructions.
 
+### Slice: LightningJS platform-boundary and evidence remediation
+
+Status: queued; implementation requires owner confirmation of the credential verification path and TMDB deployment architecture.
+
+- [ ] Keep LightningJS Movies as selected work; do not remove it solely because its renderer is canvas/WebGL-oriented.
+- [ ] Revise the project description to explain remote-first TV interaction and distinguish the browser-hosted preview from the target TV renderer.
+- [ ] Add accurate platform tags for LightningJS, WebGL/canvas rendering, remote navigation, Samsung/Tizen, and TMDB integration.
+- [ ] Change the destination label from “Live demo” to “Browser preview” if the deployed artifact is a browser adaptation rather than a device-certified TV build.
+- [ ] Add a concise accessibility note: DOM screen-reader inspection is not representative; verify only target-platform focus, input, announcer, magnification, contrast, and text-scaling behavior that has actually been tested.
+- [ ] Inspect the deployed bundle and network requests to determine whether the TMDB token is exposed client-side. Do not describe a client-visible key as secret; use a server-side proxy or public-key wording as appropriate.
+- [ ] Add the owner-supplied credential name, issuer, date, credential ID, and stable verification URL. If verification requires a form and ID, label it as an ID-based verification path rather than a direct credential page.
+- [ ] Describe the five-day training/capstone as learning context, not as a substitute for production experience.
+- [ ] Re-run the hiring-manager, client, and technical-quality review after implementation.
+
+Acceptance criteria:
+
+- The LightningJS card accurately communicates its TV/WebGL platform boundary in one scan.
+- The browser preview, source repository, and credential destinations are individually labeled and verified.
+- No TMDB secret-management claim is published without evidence from the deployed artifact architecture.
+- Accessibility language distinguishes verified behavior from platform assumptions.
+- `npm run verify` passes and the exact draft deploy is smoke-tested.
+- The reviewer confirms that LightningJS strengthens, rather than weakens, the candidate’s credibility.
+
 ## Later
 
 - Consider analytics only after defining a measurement question and privacy policy.
