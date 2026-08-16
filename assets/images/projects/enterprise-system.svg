@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Generalized enterprise request path</title>
+  <desc id="description">A non-confidential systems diagram connecting mobile and web interfaces to application services, data workflows, cloud delivery, and quality automation.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111722"/>
+      <stop offset="1" stop-color="#090b0f"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#70e1ff"/>
+      <stop offset="1" stop-color="#b8ff5a"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="630" rx="28" fill="url(#grid)"/>
+  <text x="70" y="84" fill="#9aa4b2" font-family="ui-monospace, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="4">GENERALIZED / NON-CONFIDENTIAL</text>
+  <text x="70" y="137" fill="#f3f5f7" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Multi-tenant request path</text>
+  <path d="M190 315H1010" fill="none" stroke="#fff" stroke-opacity=".15" stroke-width="5"/>
+  <path d="M190 315H1010" fill="none" stroke="url(#signal)" stroke-width="5" stroke-dasharray="11 18"/>
+  <g font-family="ui-monospace, Consolas, monospace" text-anchor="middle">
+    <g transform="translate(170 315)">
+      <rect x="-105" y="-82" width="210" height="164" rx="22" fill="#151a23" stroke="#70e1ff" stroke-opacity=".65"/>
+      <text y="-19" fill="#70e1ff" font-size="15" font-weight="700" letter-spacing="2">INTERFACE</text>
+      <text y="18" fill="#f3f5f7" font-size="24" font-weight="750">Web + mobile</text>
+      <text y="52" fill="#9aa4b2" font-size="15">React / React Native</text>
+    </g>
+    <g transform="translate(455 315)">
+      <rect x="-105" y="-82" width="210" height="164" rx="22" fill="#151a23" stroke="#fff" stroke-opacity=".2"/>
+      <text y="-19" fill="#9aa4b2" font-size="15" font-weight="700" letter-spacing="2">SERVICES</text>
+      <text y="18" fill="#f3f5f7" font-size="24" font-weight="750">Application</text>
+      <text y="52" fill="#9aa4b2" font-size="15">C# / .NET / Java</text>
+    </g>
+    <g transform="translate(740 315)">
+      <rect x="-105" y="-82" width="210" height="164" rx="22" fill="#151a23" stroke="#fff" stroke-opacity=".2"/>
+      <text y="-19" fill="#9aa4b2" font-size="15" font-weight="700" letter-spacing="2">WORKFLOWS</text>
+      <text y="18" fill="#f3f5f7" font-size="24" font-weight="750">Data + events</text>
+      <text y="52" fill="#9aa4b2" font-size="15">Postgres / SQL / ETL</text>
+    </g>
+    <g transform="translate(1025 315)">
+      <rect x="-105" y="-82" width="210" height="164" rx="22" fill="#151a23" stroke="#b8ff5a" stroke-opacity=".65"/>
+      <text y="-19" fill="#b8ff5a" font-size="15" font-weight="700" letter-spacing="2">DELIVERY</text>
+      <text y="18" fill="#f3f5f7" font-size="24" font-weight="750">Cloud runtime</text>
+      <text y="52" fill="#9aa4b2" font-size="15">AWS / CI / regression</text>
+    </g>
+  </g>
+  <rect x="70" y="525" width="1060" height="2" fill="#fff" fill-opacity=".1"/>
+  <text x="70" y="570" fill="#b8ff5a" font-family="ui-monospace, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="3">QUALITY RUNS THROUGH EVERY LAYER</text>
+</svg>

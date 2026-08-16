@@ -66,7 +66,7 @@ Acceptance criteria:
 
 ## Next
 
-- Strengthen project case-study evidence and external links.
+- [x] Strengthen project evidence, visual consistency, and direct demo/source discovery.
 - [x] Improve metadata, social sharing, and discoverability without inventing a production origin.
 - [x] Replace the legacy README with current contributor and release instructions.
 
@@ -114,3 +114,4 @@ Acceptance criteria:
 - [x] The obsolete course-assignment README is replaced by the current product, evidence, development, verification, and release guide.
 - [x] Integrated candidate `38bd72a` passes automated and production-preview verification and has earned an owner-reviewed hosted preview.
 - [x] Standalone Netlify draft deploy `6a812d492db1afb97ffa3d00` publishes tested source commit `bd7fe0a` without modifying the incumbent production site.
+- [x] Selected-work cards use a balanced evidence grid, consistent media framing, and a non-confidential enterprise-system visual.
