@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="WAMIF case study — turning GEDCOM family-history records into connected events across place and time." />
+    <meta name="author" content="Tucker Wray" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#090b0f" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Tucker Wray" />
+    <meta property="og:title" content="WAMIF case study — Tucker Wray" />
+    <meta property="og:description" content="From GEDCOM file parsing to connected family events on an interactive Mapbox globe." />
+    <meta property="og:image" content="/social-preview.png" />
+    <meta property="og:image:alt" content="Tucker Wray, software engineer — complicated systems made useful" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WAMIF case study — Tucker Wray" />
+    <meta name="twitter:description" content="From GEDCOM file parsing to connected family events on an interactive Mapbox globe." />
+    <meta name="twitter:image" content="/social-preview.png" />
+    <title>WAMIF case study — Tucker Wray</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+  </head>
+  <body class="case-study-page">
+    <div class="orb"></div>
+    <nav class="nav" aria-label="Case study navigation">
+      <div class="wrap navin">
+        <a class="brand" href="index.html">TW<span>.</span></a>
+        <div class="navlinks">
+          <a href="index.html#work">All work</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#evidence">Evidence</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <main id="top">
+      <header class="case-hero">
+        <div class="wrap case-hero-grid">
+          <div>
+            <a class="case-back" href="index.html#work">← Selected work</a>
+            <div class="section-kicker">Case study / Data visualization</div>
+            <h1>WAMIF</h1>
+            <p class="case-lede">
+              Turning text-based family-history records into connected events
+              that can be explored across geography and time.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="https://wamif.netlify.app/" target="_blank" rel="noreferrer">Explore live demo ↗</a>
+              <a class="btn" href="https://github.com/jtwray/wamifnextv2" target="_blank" rel="noreferrer">Review source ↗</a>
+            </div>
+          </div>
+          <figure class="case-hero-media">
+            <img src="assets/images/projects/wamif-map.png" alt="WAMIF displaying family-history events across an interactive Mapbox globe" />
+            <figcaption>Parsed GEDCOM events distributed across an interactive geographic view.</figcaption>
+          </figure>
+        </div>
+      </header>
+
+      <section class="case-summary" aria-label="Project summary">
+        <div class="wrap case-facts">
+          <div><span>Discipline</span><strong>Product engineering</strong></div>
+          <div><span>Format</span><strong>Exploratory product</strong></div>
+          <div><span>Core</span><strong>React / Next.js</strong></div>
+          <div><span>Domain</span><strong>Genealogy data</strong></div>
+        </div>
+      </section>
+
+      <section class="section case-narrative">
+        <div class="wrap case-two-column">
+          <div>
+            <div class="section-kicker">01 / The problem</div>
+            <h2>Family records contain movement. Flat files hide it.</h2>
+          </div>
+          <div class="case-prose">
+            <p>
+              GEDCOM files preserve people, relationships, dates, places, and
+              life events, but the format is optimized for interchange—not for
+              seeing a family story. Understanding movement requires joining
+              references, resolving event types, and placing locations into a
+              shared geographic context.
+            </p>
+            <p>
+              WAMIF explores a more useful interface: upload a GEDCOM file,
+              extract its people and events, geocode recorded places, and make
+              the resulting relationships explorable on a globe and through
+              connected-event views.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="wrap">
+          <div class="section-head">
+            <div><div class="section-kicker">02 / Architecture</div><h2>From file to explorable system.</h2></div>
+            <p>The interface makes a sequence of transformations visible without pretending the source data is already map-ready.</p>
+          </div>
+          <ol class="case-pipeline">
+            <li><span>01</span><strong>Upload</strong><p>Accept a user-selected <code>.ged</code> family-history file.</p></li>
+            <li><span>02</span><strong>Parse</strong><p>Turn GEDCOM records and references into people and event data.</p></li>
+            <li><span>03</span><strong>Connect</strong><p>Preserve graph-oriented relationships between people, events, and places.</p></li>
+            <li><span>04</span><strong>Geocode</strong><p>Resolve recorded place names into coordinates with visible processing state.</p></li>
+            <li><span>05</span><strong>Explore</strong><p>Render typed events, details, filters, and connected locations with Mapbox.</p></li>
+          </ol>
+          <div class="case-decisions">
+            <article><div class="num">DATA MODEL</div><h3>Keep relationships first-class</h3><p>People and events are treated as connected data rather than flattened map pins, supporting views that group records by person, event type, and location.</p></article>
+            <article><div class="num">USER FEEDBACK</div><h3>Expose expensive work</h3><p>Geocoding is presented as a visible state. The interface does not make network-bound location resolution look instantaneous or broken.</p></article>
+            <article><div class="num">VISUAL LANGUAGE</div><h3>Make event type scannable</h3><p>Birth, death, marriage, and residence events use a consistent legend so dense geographic clusters remain interpretable.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-evidence" id="evidence">
+        <div class="wrap">
+          <div class="section-head">
+            <div><div class="section-kicker">03 / Product evidence</div><h2>Four states, one data story.</h2></div>
+            <p>These are working-product captures, not conceptual mockups.</p>
+          </div>
+          <div class="case-gallery">
+            <figure class="case-shot case-shot-wide"><img src="assets/images/projects/wamif-geocoding.png" alt="WAMIF geocoding family-history locations after GEDCOM processing" /><figcaption><span>01 / Process</span>Location resolution remains visible while the globe is prepared.</figcaption></figure>
+            <figure class="case-shot"><img src="assets/images/projects/wamif-map.png" alt="WAMIF Mapbox globe populated with color-coded family events" /><figcaption><span>02 / Map</span>Typed events become a geographic overview.</figcaption></figure>
+            <figure class="case-shot"><img src="assets/images/projects/wamif-event-detail.png" alt="Selected WAMIF marriage event with place and date details" /><figcaption><span>03 / Inspect</span>A selected event reveals its type, place, and date.</figcaption></figure>
+            <figure class="case-shot case-shot-wide"><img src="assets/images/projects/wamif-connected-events.png" alt="WAMIF connected-events view with event-type and location filters" /><figcaption><span>04 / Connect</span>Filters expose events that share types and locations.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap case-two-column">
+          <div><div class="section-kicker">04 / Current state</div><h2>A working exploration—with an honest boundary.</h2></div>
+          <div class="case-prose">
+            <p>
+              The verified application supports GEDCOM upload and parsing,
+              geocoding state, Mapbox event visualization, event types, and
+              connected-event exploration. The public repository also exposes
+              the React/Next.js implementation and parser-oriented tests.
+            </p>
+            <p>
+              This is presented as an exploratory product, not a claim of a
+              production genealogy platform. A future product slice could add
+              a single-person movement timeline, stronger error recovery,
+              privacy guidance for uploaded family data, and a more cohesive
+              component system—but those are intentionally not represented as
+              shipped here.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="mailto:tuckerwray84@gmail.com?subject=WAMIF%20case%20study">Discuss this work ↗</a>
+              <a class="btn" href="index.html#work">Return to portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap footer"><div>© 2026 Tucker Wray</div><div>WAMIF case study · Evidence-backed exploratory work.</div></footer>
+  </body>
+</html>

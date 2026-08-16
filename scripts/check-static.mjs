@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const htmlPath = resolve(root, "index.html");
+const caseStudyPath = resolve(root, "wamif.html");
 const cssPath = resolve(root, "assets/css/portfolio.css");
 const errors = [];
 
@@ -12,10 +13,12 @@ const requireFile = (path, label) => {
 };
 
 requireFile(htmlPath, "Entry document");
+requireFile(caseStudyPath, "WAMIF case-study document");
 requireFile(cssPath, "Primary stylesheet");
 
 if (errors.length === 0) {
   const html = readFileSync(htmlPath, "utf8");
+  const caseStudyHtml = readFileSync(caseStudyPath, "utf8");
   const css = readFileSync(cssPath, "utf8");
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(
     (match) => match[1],
@@ -88,6 +91,34 @@ if (errors.length === 0) {
 
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) errors.push(`Expected exactly one h1; found ${h1Count}`);
+
+  const caseStudyIds = [...caseStudyHtml.matchAll(/\sid=["']([^"']+)["']/g)].map(
+    (match) => match[1],
+  );
+  const caseStudyFragments = [
+    ...caseStudyHtml.matchAll(/\shref=["']#([^"']+)["']/g),
+  ].map((match) => match[1]);
+  const missingCaseStudyTargets = [
+    ...new Set(caseStudyFragments.filter((id) => !caseStudyIds.includes(id))),
+  ];
+  if (missingCaseStudyTargets.length) {
+    errors.push(
+      `Missing WAMIF case-study link targets: ${missingCaseStudyTargets.join(", ")}`,
+    );
+  }
+  const caseStudyH1Count = (caseStudyHtml.match(/<h1\b/gi) || []).length;
+  if (caseStudyH1Count !== 1) {
+    errors.push(`Expected exactly one WAMIF case-study h1; found ${caseStudyH1Count}`);
+  }
+  if (!/href=["']wamif\.html["']/i.test(html)) {
+    errors.push("Homepage does not link to the WAMIF case study");
+  }
+  if (!/href=["']https:\/\/wamif\.netlify\.app\//i.test(caseStudyHtml)) {
+    errors.push("WAMIF case study is missing the verified live-demo link");
+  }
+  if (!/href=["']https:\/\/github\.com\/jtwray\/wamifnextv2/i.test(caseStudyHtml)) {
+    errors.push("WAMIF case study is missing the verified source link");
+  }
 }
 
 if (errors.length) {
@@ -99,5 +130,6 @@ if (errors.length) {
   console.log("- required source files and local assets exist");
   console.log("- internal anchors resolve and HTML IDs are unique");
   console.log("- baseline metadata, landmarks, headings, and image alt text are present");
+  console.log("- the WAMIF case study has valid anchors and verified demo/source paths");
   console.log("- a qualified mail contact includes a subject");
 }
