@@ -75,6 +75,31 @@ Acceptance criteria:
 - Consider analytics only after defining a measurement question and privacy policy.
 - Consider richer interactions only when they improve the primary conversion goal.
 
+### Slice: Curated Interaction Lab
+
+- [ ] Inventory the original source and public URL for each candidate experiment.
+- [ ] Select no more than three experiments that demonstrate distinct engineering ideas.
+- [ ] Rebuild or polish selected experiments to match the portfolio's visual system.
+- [ ] Replace copyrighted characters and unclear novelty framing with original, professional presentation.
+- [ ] Add keyboard, touch, responsive, reduced-motion, and loading/failure behavior.
+- [ ] Present the collection as a compact “Interaction Lab” after Experience and before Contact.
+- [ ] Keep experiments subordinate to primary project evidence and qualified-contact paths.
+
+Candidate order:
+
+1. Scrolling video-mask sticky hero.
+2. Three-dimensional carousel/word interaction, after locating its source and public demo.
+3. Redesigned spatial “popsicle” skills experiment.
+
+Acceptance criteria:
+
+- Every published experiment states the interaction or rendering question it explores.
+- Every experiment works with pointer, keyboard, and touch where applicable.
+- Reduced-motion mode remains complete and understandable without animation.
+- No copyrighted character or unverified third-party asset is shipped.
+- The section does not materially delay initial rendering or obscure Work, Experience, or Contact.
+- Responsive, accessibility, production-build, and release-verification checks pass.
+
 ## Completed
 
 - [x] Vite local-development and production-build workflow exists.
