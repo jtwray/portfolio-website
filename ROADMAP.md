@@ -127,6 +127,37 @@ Acceptance criteria:
 - Privacy and failure-state language is accurate and non-alarmist.
 - The exact draft passes build, link, and browser smoke checks.
 
+### Slice: WAMIF parser correctness — zero people, 267 events
+
+Status: queued as a separate product-repository slice; do not solve this by altering the portfolio fixture.
+
+Evidence:
+
+- The original family dataset and the approved names-only derivative produce the same browser result: `0 people`, `267 events`.
+- Both datasets reach the geocoding state and initialize the map.
+- This control test isolates the discrepancy to WAMIF application/parser behavior rather than sanitization.
+- The local parser source appears to inspect the second whitespace token as the GEDCOM tag, while standard individual records use `0 @I...@ INDI`; confirm this against the exact deployed source before editing.
+
+Scope:
+
+- [ ] Identify the exact deployed WAMIF source/revision behind `https://wamif.netlify.app/`.
+- [ ] Reproduce the parser result in the matching local WAMIF repository with a non-private fixture.
+- [ ] Correct record-token parsing for standard `0 @pointer@ INDI` and related record shapes without breaking event parsing.
+- [ ] Add parser tests covering individual records, families, names, pointers, and event linkage.
+- [ ] Re-run the original and names-only fixtures locally; do not publish the original fixture.
+- [ ] Verify people count, event count, connected-event controls, selected-event details, and map rendering in the browser.
+- [ ] Deploy only to a WAMIF test/preview context if available; do not change the portfolio or its production URL from this slice.
+- [ ] Update the portfolio case study only after the fixed behavior is independently verified.
+
+Acceptance criteria:
+
+- The matching WAMIF build reports a non-zero people count for the approved fixture.
+- Individual and family pointers resolve consistently and event records link to people.
+- Existing event parsing and map behavior remain intact.
+- Automated parser tests and browser verification pass.
+- The fix is recorded in the WAMIF product repository with its exact source commit and deployment evidence.
+- Portfolio wording remains appropriately limited until those criteria are met.
+
 ### Slice: Client engagement and delivery clarity
 
 Status: queued; owner approval is required for service boundaries, availability, and any budget/timeline language.
