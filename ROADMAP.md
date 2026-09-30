@@ -199,6 +199,8 @@ Acceptance criteria:
 
 ### Slice: Curated Interaction Lab
 
+Status: deferred from the portfolio relaunch candidate. The initial System Orbit experiment was previously published in the local candidate after Experience; this slice removes it from the public homepage while preserving the experiment history and audit below for a later decision.
+
 - [x] Inventory the original source and public URL for each candidate experiment.
 - [x] Select no more than three experiments that demonstrate distinct engineering ideas; begin with the locally supported 3D text carousel.
 - [ ] Rebuild or polish selected experiments to match the portfolio's visual system.

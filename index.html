@@ -594,56 +594,10 @@
           </div>
         </div>
       </section>
-      <section class="section interaction-lab" id="lab">
-        <div class="wrap">
-          <div class="section-head reveal">
-            <div>
-              <div class="section-kicker">04 / Interaction Lab</div>
-              <h2>Small experiments.<br />Specific questions.</h2>
-            </div>
-            <p>
-              A compact study in spatial navigation: can a three-dimensional
-              carousel remain legible, intentional, and fully user-controlled?
-            </p>
-          </div>
-          <div class="lab-card reveal" data-orbit-lab>
-            <div class="lab-copy">
-              <div class="num">EXPERIMENT 01 — SPATIAL INTERFACE</div>
-              <h3>System orbit</h3>
-              <p>
-                The original text-carousel prototype is reduced to its useful
-                idea: depth can organize related capabilities without turning
-                navigation into decoration. Rotate the system one deliberate
-                step at a time.
-              </p>
-              <div class="lab-controls" aria-label="Rotate system orbit">
-                <button type="button" data-orbit-previous aria-label="Rotate to previous capability">← Previous</button>
-                <button type="button" data-orbit-next aria-label="Rotate to next capability">Next →</button>
-              </div>
-              <p class="lab-status" aria-live="polite" data-orbit-status>
-                Interface — 1 of 8
-              </p>
-            </div>
-            <div class="orbit-stage" aria-hidden="true">
-              <div class="orbit-wheel" data-orbit-wheel>
-                <span style="--i: 0">Interface</span>
-                <span style="--i: 1">Application</span>
-                <span style="--i: 2">Data</span>
-                <span style="--i: 3">Cloud</span>
-                <span style="--i: 4">Quality</span>
-                <span style="--i: 5">Delivery</span>
-                <span style="--i: 6">Product</span>
-                <span style="--i: 7">Systems</span>
-              </div>
-              <div class="orbit-core">TW<span>/</span>SE</div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="section" id="contact">
         <div class="wrap contact">
           <div class="reveal">
-            <div class="section-kicker">05 / Contact</div>
+            <div class="section-kicker">04 / Contact</div>
             <h2 class="section h2">
               Let's build something worth showing people.
             </h2>
@@ -692,29 +646,6 @@
         { threshold: 0.12 },
       );
       document.querySelectorAll(".reveal").forEach((e) => observer.observe(e));
-      const orbitLab = document.querySelector("[data-orbit-lab]");
-      if (orbitLab) {
-        const labels = [
-          "Interface",
-          "Application",
-          "Data",
-          "Cloud",
-          "Quality",
-          "Delivery",
-          "Product",
-          "Systems",
-        ];
-        const wheel = orbitLab.querySelector("[data-orbit-wheel]");
-        const status = orbitLab.querySelector("[data-orbit-status]");
-        let orbitIndex = 0;
-        const rotateOrbit = (direction) => {
-          orbitIndex = (orbitIndex + direction + labels.length) % labels.length;
-          wheel.style.setProperty("--rotation", `${orbitIndex * -45}deg`);
-          status.textContent = `${labels[orbitIndex]} — ${orbitIndex + 1} of ${labels.length}`;
-        };
-        orbitLab.querySelector("[data-orbit-previous]").addEventListener("click", () => rotateOrbit(-1));
-        orbitLab.querySelector("[data-orbit-next]").addEventListener("click", () => rotateOrbit(1));
-      }
       const wamifStory = document.querySelector("[data-wamif-story]");
       if (wamifStory) {
         const frames = [
