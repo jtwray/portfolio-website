@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-label="A map highlighting useful services">
+<defs><filter id="grain"><feTurbulence baseFrequency=".6" numOctaves="2" seed="8" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer></filter></defs>
+<rect width="720" height="440" fill="#a1b19a"/>
+<path d="M-40 80L742 80M-40 190L742 190M-40 300L742 300M90-20L90 480M232-20L232 480M415-20L415 480M576-20L576 480" stroke="#efe0ba" stroke-width="35" fill="none"/>
+<path d="M-40 80L742 80M-40 190L742 190M-40 300L742 300M90-20L90 480M232-20L232 480M415-20L415 480M576-20L576 480" stroke="#f9eed7" stroke-width="1.5" fill="none" opacity=".8" stroke-dasharray="6 12"/>
+<g fill="#5f826e" opacity=".94"><rect x="115" y="104" width="89" height="62" rx="14"/><rect x="457" y="212" width="93" height="64" rx="10"/><rect x="269" y="326" width="111" height="87" rx="12"/><rect x="605" y="110" width="78" height="60" rx="8"/></g>
+<g fill="#346c63" opacity=".8"><circle cx="146" cy="136" r="27"/><circle cx="170" cy="122" r="20"/><circle cx="479" cy="243" r="27"/><circle cx="502" cy="238" r="21"/><circle cx="309" cy="367" r="30"/><circle cx="337" cy="358" r="18"/></g>
+<g fill="none" stroke="#ce6749" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round"><path d="M165 52Q228 111 294 133T442 160Q500 195 514 324Q552 355 638 377"/></g>
+<g transform="translate(296 136)"><path d="M0-47C-27-47-45-28-45-4C-45 29 0 68 0 68S45 29 45-4C45-28 27-47 0-47Z" fill="#9e3b2c" stroke="#fff0cd" stroke-width="5"/><circle cy="-7" r="16" fill="#f4d7a1"/><path d="M-8-7H8M0-15V1" stroke="#9e3b2c" stroke-width="4"/></g>
+<g transform="translate(517 322) scale(.85)"><path d="M0-47C-27-47-45-28-45-4C-45 29 0 68 0 68S45 29 45-4C45-28 27-47 0-47Z" fill="#9e3b2c" stroke="#fff0cd" stroke-width="5"/><circle cy="-7" r="16" fill="#f4d7a1"/><path d="M-8-7H8M0-15V1" stroke="#9e3b2c" stroke-width="4"/></g>
+<g transform="translate(166 51) scale(.62)"><path d="M0-47C-27-47-45-28-45-4C-45 29 0 68 0 68S45 29 45-4C45-28 27-47 0-47Z" fill="#ba8150" stroke="#fff0cd" stroke-width="5"/><circle cy="-7" r="16" fill="#f4d7a1"/></g>
+<g font-family="Georgia,serif" fill="#2e5551"><text x="55" y="245" font-size="26" letter-spacing="4">CITY &amp; CARE</text><text x="533" y="46" font-size="13" letter-spacing="2">NORTH ↑</text><text x="19" y="427" font-size="14">THE RIGHT HELP, ON THE MAP.</text></g>
+<rect x="616" y="211" width="74" height="50" fill="#dfc79b" stroke="#43645b"/><path d="M627 247L640 232L653 242L675 217" stroke="#3d6661" stroke-width="4" fill="none"/>
+<rect width="720" height="440" filter="url(#grain)" opacity=".28"/></svg>
