@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/certs/lambda"
+  to = "https://www.credly.com/badges/9ddc5207-5a9b-4117-a632-8e966adaf2d3/linked_in_profile"
+  status = 301
+
+[[redirects]]
+  from = "/certs/aws"
+  to = "https://www.credly.com/badges/6a8a62b7-979c-4f3a-a330-ed0bba2ccc31/linked_in_profile"
+  status = 301
+
+[[redirects]]
+  from = "/certs/sql"
+  to = "https://verify.w3schools.com/1PIS8VXHQE"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/"
+  status = 301
+  force = true
